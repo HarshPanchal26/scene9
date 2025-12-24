@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #0A0A0B; /* gray-950 - Deep canvas for contemplative browsing */
+    --color-primary-foreground: #F5F5F7; /* gray-50 - Extended reading comfort on dark */
+    
+    /* Secondary Colors */
+    --color-secondary: #1A1A1D; /* gray-900 - Subtle content surface differentiation */
+    --color-secondary-foreground: #F5F5F7; /* gray-50 - Clear text on secondary surfaces */
+    
+    /* Accent Colors */
+    --color-accent: #00D4FF; /* cyan-400 - Future-tech highlights for key moments */
+    --color-accent-foreground: #0A0A0B; /* gray-950 - High contrast on accent */
+    
+    /* Background Colors */
+    --color-background: #050505; /* gray-950 - Pure depth for video sections */
+    --color-foreground: #F5F5F7; /* gray-50 - Primary text color */
+    
+    /* Surface Colors */
+    --color-surface: #151518; /* gray-900 - Card and section gentle elevation */
+    --color-surface-foreground: #F5F5F7; /* gray-50 - Text on surface elements */
+    
+    /* Border & Input */
+    --color-border: #2d2d2d; /* gray-800 - Subtle separation */
+    --color-input: #1A1A1D; /* gray-900 - Form input backgrounds */
+    --color-ring: #00D4FF; /* cyan-400 - Focus ring color */
+    
+    /* Card Colors */
+    --color-card: #151518; /* gray-900 - Card backgrounds */
+    --color-card-foreground: #F5F5F7; /* gray-50 - Card text */
+    
+    /* Popover Colors */
+    --color-popover: #1A1A1D; /* gray-900 - Popover backgrounds */
+    --color-popover-foreground: #F5F5F7; /* gray-50 - Popover text */
+    
+    /* Muted Colors */
+    --color-muted: #2d2d2d; /* gray-800 - Muted backgrounds */
+    --color-muted-foreground: #A1A1AA; /* gray-400 - Clear hierarchy without harsh contrast */
+    
+    /* Destructive/Error Colors */
+    --color-destructive: #FF4757; /* red-500 - Clear concern with helpful warmth */
+    --color-destructive-foreground: #FFFFFF; /* white - High contrast on error */
+    --color-error: #FF4757; /* red-500 - Clear concern with helpful warmth */
+    --color-error-foreground: #FFFFFF; /* white - High contrast on error */
+    
+    /* Success Colors */
+    --color-success: #00FF88; /* green-400 - Positive reinforcement with energy */
+    --color-success-foreground: #0A0A0B; /* gray-950 - Dark text on success */
+    
+    /* Warning Colors */
+    --color-warning: #FFB800; /* amber-400 - Attention without alarm or panic */
+    --color-warning-foreground: #0A0A0B; /* gray-950 - Dark text on warning */
+    
+    /* Additional Brand Colors */
+    --color-brand-purple: #6366f1; /* indigo-500 - Confident purple for secondary actions */
+    --color-brand-coral: #ff6b6b; /* red-400 - Warm coral for emotional connection */
+    --color-brand-neon-cyan: #00ffff; /* cyan-500 - Future-tech accent */
+    --color-brand-neon-red: #ff6b6b; /* red-400 - Future-tech accent */
+    
+    /* Text Hierarchy */
+    --color-text-primary: #F5F5F7; /* gray-50 - Extended reading comfort on dark */
+    --color-text-secondary: #A1A1AA; /* gray-400 - Clear hierarchy without harsh contrast */
+    
+    /* Spacing System - Golden Ratio */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 0.8125rem; /* 13px */
+    --spacing-md: 1.3125rem; /* 21px */
+    --spacing-lg: 2.125rem; /* 34px */
+    --spacing-xl: 3.4375rem; /* 55px */
+    --spacing-2xl: 5.5625rem; /* 89px */
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.5rem; /* 8px */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-xl: 1rem; /* 16px */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-ease-out {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .ease-out-custom {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .shadow-cinematic {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .shadow-glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  
+  .shadow-glow-purple {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  
+  .gradient-consciousness {
+    background: linear-gradient(45deg, #1a1a1a 0%, #00d4ff 50%, #6366f1 100%);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  }
+
+  @keyframes scroll-infinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  .animate-scroll-infinite {
+    animation: scroll-infinite 30s linear infinite;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+
+  @keyframes morph {
+    0%, 100% {
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+    50% {
+      border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+  }
+
+  .animate-morph {
+    animation: morph 8s ease-in-out infinite;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
